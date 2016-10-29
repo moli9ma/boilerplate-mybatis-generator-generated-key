@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+
+<generatorConfiguration >
+    <classPathEntry location="/Users/moritakuma/.m2/repository/mysql/mysql-connector-java/5.1.17/mysql-connector-java-5.1.17.jar" />
+    <context id="context1" >
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/bicycle" userId="root" password="" />
+         
+        <javaModelGenerator targetPackage="net.moli9ma.boilerplates" targetProject="/Users/moritakuma/IdeaProjects/boilerplate-mybatis-generator-generated-key/src/main/java" />
+        <sqlMapGenerator targetPackage="mapper" targetProject="/Users/moritakuma/IdeaProjects/boilerplate-mybatis-generator-generated-key/src/main/resources" />
+        <javaClientGenerator targetPackage="net.moli9ma.boilerplates" targetProject="/Users/moritakuma/IdeaProjects/boilerplate-mybatis-generator-generated-key/src/main/java" type="XMLMAPPER" />
+
+        <table schema="bicycle" tableName="road_bike" >
+            <property name="ignoreQualifiersAtRuntime" value="true"/>
+            <property name="modelOnly" value="false"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+    </context>
+</generatorConfiguration>
